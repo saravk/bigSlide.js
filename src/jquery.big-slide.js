@@ -11,6 +11,7 @@
       'menu': ('#menu'),
       'push': ('.push'),
       'side': 'left',
+      'pushClass':'pushed',
       'menuWidth': '15.625em',
       'speed': '300',
       'activeBtn':'menu-open'
@@ -50,6 +51,7 @@
       menu._state = 'open';
       menu.css(settings.side, '0');
       push.css(settings.side, width);
+      push.addClass(settings.pushClass);
       menuLink.addClass(settings.activeBtn);
     };
 
@@ -57,6 +59,7 @@
       menu._state = 'closed';
       menu.css(settings.side, '-' + width);
       push.css(settings.side, '0');
+      push.removeClass(settings.pushClass);
       menuLink.removeClass(settings.activeBtn);
     };
 
